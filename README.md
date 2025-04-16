@@ -1,30 +1,53 @@
-# Les Bases de Git
+# 📖 Projet 1 : Blog Collaboratif en Markdown
 
-## Introduction
+## 📌 Présentation
 
-Git est un système de gestion de versions distribué très utilisé dans le développement logiciel. Il permet à plusieurs personnes de travailler sur un même projet, de conserver un historique des modifications et de revenir facilement à des versions antérieures si besoin.
+Ce projet a été réalisé dans le cadre de ma formation sur l’utilisation de **Git** et **GitHub**.  
+L’objectif était de simuler un travail collaboratif entre deux développeurs, en créant un blog contenant deux articles rédigés en **Markdown**.
 
-## Pourquoi utiliser Git ?
+---
 
-Git présente de nombreux avantages pour les développeurs :
+## 📌 Objectifs du projet
 
-- 🌱 Suivi des modifications sur chaque fichier du projet.
-- 👥 Travail collaboratif facilité grâce aux branches.
-- ⏪ Possibilité de revenir à un état antérieur du projet.
-- 🔀 Fusion des modifications et gestion des conflits.
+- Utiliser **Git** pour gérer le versioning d’un projet.
+- Créer et gérer plusieurs **branches**.
+- Rédiger deux articles collaboratifs :
+  - Article 1 : *Introduction aux bases de Git*
+  - Article 2 : *Présentation de la plateforme GitHub*
+- Provoquer et résoudre un **conflit de fusion** volontairement dans le `README.md`.
+- Fusionner les branches dans une branche `merge-blog`.
+- Réaliser une **Pull Request** vers `main`.
+- Créer une **Issue** pour proposer un article 3.
 
-## Commandes Git essentielles
+---
 
-Voici un aperçu des commandes de base que tout développeur doit connaître :
+## 📌 Organisation du projet
+
+- 📂 Branche `article-1` : Rédaction de l'article 1
+- 📂 Branche `article-2` : Rédaction de l'article 2
+- 📂 Branche `merge-blog` : Fusion des deux articles et résolution des conflits
+- 📂 Branche `main` : Intégration finale
+
+---
+
+## 📌 Détails des articles
+
+- `article-1.md` : Introduction aux bases de Git
+- `article-2.md` : Présentation de GitHub
+
+Chaque article est écrit en Markdown et respecte la structure classique d’un article technique.
+
+---
+
+## 📌 Commandes Git utilisées
+
+Quelques commandes essentielles du projet :
 
 ```bash
-git init                # Initialiser un dépôt local
-git add .               # Ajouter tous les fichiers au suivi
-git commit -m "Message" # Valider les modifications avec un message
-git status              # Vérifier l'état des fichiers
-git log                 # Consulter l'historique des commits
-git branch              # Lister les branches existantes
-git checkout nom_branche# Se déplacer dans une branche
-git merge nom_branche   # Fusionner une branche dans l'actuelle
-git push                # Envoyer les modifications vers GitHub
-git pull                # Récupérer les modifications depuis GitHub
+git init
+git add .
+git commit -m "message"
+git push origin nom_branche
+git checkout -b nouvelle_branche
+git merge branche_a_fusionner
+git pull origin main --rebase
